@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "Pindrop",
+  "version": "1.0.0",
+  "description": "Drag any Pinterest image to instantly copy it to clipboard. Paste directly into Photoshop. Premium designer workflow tool.",
+
+  "icons": {
+    "16":  "icons/icon128.png",
+    "32":  "icons/icon128.png",
+    "48":  "icons/icon128.png",
+    "128": "icons/icon128.png"
+  },
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16":  "icons/icon128.png",
+      "32":  "icons/icon128.png",
+      "48":  "icons/icon128.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Pindrop"
+  },
+
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.pinterest.com/*", "*://*.pinterest.co.uk/*", "*://*.pinterest.ca/*", "*://*.pinterest.au/*", "*://*.pinterest.fr/*", "*://*.pinterest.de/*", "*://*.pinterest.es/*", "*://*.pinterest.it/*", "*://*.pinterest.jp/*", "*://*.pinterest.pt/*", "*://*.pinterest.nz/*", "*://*.pinterest.com.mx/*"],
+      "js": ["src/content.js"],
+      "css": ["src/toast.css"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "permissions": [
+    "clipboardWrite",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "*://*.pinterest.com/*",
+    "*://*.pinimg.com/*",
+    "*://*.pinterest.co.uk/*",
+    "*://*.pinterest.ca/*"
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*", "src/*"],
+      "matches": ["*://*.pinterest.com/*"]
+    }
+  ]
+}
