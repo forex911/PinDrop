@@ -1,3 +1,13 @@
+<p align="center">
+  <img src="icons/icon128.png" alt="Pindrop Logo" width="128" height="128">
+</p>
+
+<h1 align="center">Pindrop</h1>
+
+<p align="center">
+  Premium Chrome Extension for Designer Workflows
+</p>
+
 # PinDrop
 
 Premium Chrome Extension for Professional Designer Workflows
