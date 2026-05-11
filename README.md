@@ -8,10 +8,6 @@
   Premium Chrome Extension for Designer Workflows
 </p>
 
-# PinDrop
-
-Premium Chrome Extension for Professional Designer Workflows
-
 PinDrop allows users to drag any image from Pinterest and instantly copy it to the clipboard in a Photoshop-ready format. This removes the need for manual downloads, save dialogs, and unnecessary folder management.
 
 Workflow:
